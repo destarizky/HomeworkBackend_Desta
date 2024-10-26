@@ -1,0 +1,223 @@
+/* Gaya untuk latar belakang video */
+.homepage-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%); /* Menurunkan kecerahan video agar teks terlihat jelas */
+}
+
+.background-video {
+    position: fixed; /* Mengubah posisi menjadi fixed */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Mengatur lebar penuh layar */
+    height: 100vh; /* Mengatur tinggi penuh layar */
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+/* Gaya untuk container utama */
+.homepage-container {
+    position: relative;
+    max-width: 600px;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.homepage-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.homepage-container p {
+    color: #444;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Gaya tombol pesan tiket */
+.order-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #c0392b;
+}
+
+/* Gaya untuk container pemesanan */
+.order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.order-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk form */
+.order-form {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+}
+
+.order-form label {
+    font-weight: bold;
+    color: #555;
+}
+
+.order-form input[type="number"],
+.order-form select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.order-form select {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Gaya tombol hitung total harga */
+.calculate-button {
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.calculate-button:hover {
+    background-color: #2980b9;
+}
+
+/* Gaya hasil perhitungan */
+.result {
+    font-size: 1.3rem;
+    color: #e74c3c;
+    margin-top: 20px;
+}
+
+/* Gaya untuk halaman responsif pada layar kecil */
+@media (max-width: 768px) {
+    .homepage-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .homepage-container h1 {
+        font-size: 2rem;
+    }
+
+    .homepage-container p {
+        font-size: 1rem;
+    }
+
+    .order-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Efek animasi pada logo */
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Efek bayangan dan transisi halus pada tombol */
+.order-button {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.order-button:hover {
+    background-color: #c0392b;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Animasi pada teks saat muncul */
+.homepage-container h1,
+.homepage-container p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/*Pendefinisian Animasi dalam CSS */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tambahkan efek hover pada video latar */
+.background-video:hover {
+    filter: brightness(60%);
+}
+
+/* Efek halus pada peralihan warna latar belakang */
+.homepage-container {
+    transition: background-color 0.3s ease;
+}
+
+.homepage-container:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
